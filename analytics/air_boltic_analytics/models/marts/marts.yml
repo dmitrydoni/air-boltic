@@ -1,0 +1,45 @@
+version: 2
+
+models:
+  - name: fct_order
+    description: "Fact table for orders"
+    columns:
+      - name: order_id
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_id
+      - name: trip_id
+      - name: price_eur
+      - name: seat_no
+      - name: status
+
+  - name: dim_customer
+    description: "Dimension table for customers"
+    columns:
+      - name: customer_id
+      - name: customer_name
+      - name: customer_email
+      - name: customer_phone_number
+      - name: customer_group_name
+
+  - name: dim_trip
+    description: "Dimension table for trips"
+    columns:
+      - name: trip_id
+      - name: origin_city
+      - name: destination_city
+      - name: airplane_id
+      - name: start_timestamp
+      - name: end_timestamp
+
+  - name: dim_aeroplane
+    description: "Dimension table for aeroplanes"
+    columns:
+      - name: manufacturer
+      - name: airplane_model
+      - name: max_seats
+      - name: max_weight
+      - name: max_distance
+      - name: engine_type
+      - name: is_in_operation

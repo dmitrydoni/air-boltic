@@ -1,0 +1,33 @@
+version: 2
+
+sources:
+  
+  - name: airboltic
+    description: "Air Boltic operations data"
+    schema: staging
+    
+    tables:
+      - name: raw_customers
+        identifier: raw_customer
+        description: "Customers catalog"
+      - name: raw_customer_groups
+        identifier: raw_customer_group
+        description: "Customer groups"
+      - name: raw_aeroplanes
+        identifier: raw_aeroplane
+        description: "Aeroplanes in operation"
+      - name: raw_orders
+        identifier: raw_order
+        description: "Orders"
+      - name: raw_trips
+        identifier: raw_trip
+        description: "Trips"
+  
+  - name: aeroplanes_catalog 
+    description: "Catalog of aeroplane manufacturers and models"
+    schema: staging
+    
+    tables:
+      - name: raw_aeroplane_models
+        identifier: raw_aeroplane_model
+        description: "Aeroplane models catalog"

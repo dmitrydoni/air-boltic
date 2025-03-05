@@ -1,0 +1,101 @@
+version: 2
+
+models:
+  - name: int_aeroplane_models
+    description: "Aeroplane models"
+    columns:
+      - name: manufacturer
+        description: "Aircraft manufacturer"
+      - name: airplane_model
+        description: "Model name"
+      - name: max_seats
+        description: "Maximum number of seats"
+      - name: max_weight
+        description: "Maximum weight capacity"
+      - name: max_distance
+        description: "Maximum flight distance"
+      - name: engine_type
+        description: "Type of engine"
+
+  - name: int_aeroplanes
+    description: "Aeroplanes in operation"
+    columns:
+      - name: airplane_id
+        description: "Airplane ID"
+        data_tests:
+          - unique
+          - not_null
+      - name: airplane_model
+        description: "Model name"
+      - name: manufacturer
+        description: "Manufacturer"
+
+  - name: int_customer_groups
+    description: "Customer groups"
+    columns:
+      - name: customer_group_id
+        description: "Customer group ID"
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_group_type
+        description: "Type"
+      - name: customer_group_name
+        description: "Name"
+      - name: registry_number
+        description: "Registry number"
+
+  - name: int_customers
+    description: "Customers"
+    columns:
+      - name: customer_id
+        description: "Customer ID"
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_name
+        description: "Customer name"
+      - name: customer_group_id
+        description: "Customer group ID"
+      - name: customer_email
+        description: "Email address"
+      - name: customer_phone_number
+        description: "Phone number"
+
+  - name: int_orders
+    description: "Orders"
+    columns:
+      - name: order_id
+        description: "Order ID"
+        data_tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Customer ID"
+      - name: trip_id
+        description: "Trip ID"
+      - name: price_eur
+        description: "Price of the order in EUR"
+      - name: seat_no
+        description: "Seat number"
+      - name: status
+        description: "Order status"
+
+  - name: int_trips
+    description: "Trips"
+    columns:
+      - name: trip_id
+        description: "Trip ID"
+        data_tests:
+          - unique
+          - not_null
+      - name: origin_city
+        description: "Departure city"
+      - name: destination_city
+        description: "Arrival city"
+      - name: airplane_id
+        description: "Airplane ID"
+      - name: start_timestamp
+        description: "Scheduled departure time"
+      - name: end_timestamp
+        description: "Scheduled arrival time"

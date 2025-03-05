@@ -1,0 +1,15 @@
+[project]
+name = "air-boltic"
+version = "1.0.0"
+description = "Air Boltic Analytics"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dbt-core>=1.9.2",
+    "dbt-duckdb>=1.9.2",
+    "duckdb>=1.2.0",
+    "nbconvert>=7.16.6",
+    "pandas>=2.2.3",
+    "polars>=1.24.0",
+    "pyarrow>=19.0.1",
+]
