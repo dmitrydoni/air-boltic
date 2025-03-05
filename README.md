@@ -54,5 +54,5 @@ This project is based on modern open-source technologies:
 - Diagrams: [Mermaid](https://mermaid.js.org/)
 
 ## Specification
-[Analytics report](analytics/analytics_report.html)
+[Analytics report](https://nbviewer.org/github/dmitrydoni/air-boltic/blob/main/analytics/analytics_report.html)
 
